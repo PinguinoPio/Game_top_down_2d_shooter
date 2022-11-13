@@ -160,7 +160,7 @@ hero = sprites.create(img`
     . . . 5 f 4 4 f . f 4 4 f . . . 
     . . . . . f f . . . f f . . . . 
     `, SpriteKind.Player)
-info.startCountdown(5)
+info.startCountdown(150)
 info.setLife(5)
 info.setScore(0)
 controller.moveSprite(hero, 75, 75)
@@ -326,22 +326,22 @@ game.onUpdateInterval(150, function () {
     }
     if (controller.left.isPressed() && (controller.up.isPressed() && !(controller.down.isPressed()))) {
         hero.setImage(img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . 2 2 2 2 2 . . . . . . . 
-            . . . . 2 2 . . . . . . . . . . 
-            . . . . 2 . 2 . . . . . . . . . 
-            . . . . 2 . . 2 . . . . . . . . 
-            . . . . 2 . . . 2 . . . . . . . 
-            . . . . . . . . . 2 . . . . . . 
-            . . . . . . . . . . 2 . . . . . 
-            . . . . . . . . . . . 2 . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . f f . . f . . 
+            . . . . . . . . f 4 f f f . . . 
+            . . . . . . . f 4 4 f 4 f . . . 
+            . . . . f f f 4 4 f 4 f . . . . 
+            . . . f 4 4 4 4 4 f 4 f . . . . 
+            . . f 4 4 4 4 4 f f f f f f f . 
+            . . f 4 f 1 4 4 f 4 4 f b b f f 
+            . . f 4 1 1 4 4 f 4 4 f b b b f 
+            . f f 4 4 4 4 4 4 4 4 f b b b f 
+            2 b b b 4 4 4 4 4 4 4 f b b b f 
+            4 b b b f f 4 f 4 f f f b b b f 
+            . f f f . f 4 f 4 f . 4 2 2 2 4 
+            . . . . . f 4 f 4 f . 5 4 2 4 5 
+            . . . . . f 4 f 4 f . . 5 4 5 . 
+            . . . . f 4 4 f f . . . 5 4 . . 
+            . . . . . f f . . . . . . . . . 
             `)
         facing_direction = 3.926990817
     }
@@ -368,22 +368,22 @@ game.onUpdateInterval(150, function () {
     }
     if (controller.right.isPressed() && (controller.up.isPressed() && !(controller.down.isPressed()))) {
         hero.setImage(img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . 2 2 2 2 2 . . . . 
-            . . . . . . . . . . 2 2 . . . . 
-            . . . . . . . . . 2 . 2 . . . . 
-            . . . . . . . . 2 . . 2 . . . . 
-            . . . . . . . 2 . . . 2 . . . . 
-            . . . . . . 2 . . . . . . . . . 
-            . . . . . 2 . . . . . . . . . . 
-            . . . . 2 . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
+            . . f . . f f . . . . . . . . . 
+            . . . f f f 4 f . . . . . . . . 
+            . . . f 4 f 4 4 f . . . . . . . 
+            . . . . f 4 f 4 4 f f f . . . . 
+            . . . . f 4 f 4 4 4 4 4 f . . . 
+            . f f f f f f f 4 4 4 4 4 f . . 
+            f f b b f 4 4 f 4 4 1 f 4 f . . 
+            f b b b f 4 4 f 4 4 1 1 4 f . . 
+            f b b b f 4 4 4 4 4 4 4 4 f f . 
+            f b b b f 4 4 4 4 4 4 4 b b b 2 
+            f b b b f f f 4 f 4 f f b b b 4 
+            4 2 2 2 4 . f 4 f 4 f . f f f . 
+            5 4 2 4 5 . f 4 f 4 f . . . . . 
+            . 5 4 5 . . f 4 f 4 f . . . . . 
+            . . 4 5 . . . f f 4 4 f . . . . 
+            . . . . . . . . . f f . . . . . 
             `)
         facing_direction = 5.4977871438
     }
